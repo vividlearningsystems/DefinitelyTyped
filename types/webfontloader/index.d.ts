@@ -29,8 +29,8 @@ declare namespace WebFont {
         /** This event is triggered if the font can't be loaded. */
         fontinactive?(familyName:string, fvd:string):void;
 
-        /** Child window or iframes to manage fonts for */
-        context?:Array<string>;
+        /** Child window or iframe to manage fonts for */
+        context?:Window;
 
         custom?:Custom;
         google?:Google;
@@ -39,9 +39,9 @@ declare namespace WebFont {
         monotype?:Monotype;
     }
     export interface Google {
-        api?: string;
+        api?:string;
         families:Array<string>;
-        text?: string;
+        text?:string;
     }
     export interface Typekit {
         id?:string;
